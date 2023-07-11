@@ -1,0 +1,64 @@
+@use "./variables";
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: variables.$primary-font;
+  transition: 0.1s;
+  word-break: break-all;
+}
+
+// Main section styles
+main {
+  min-height: 100vh;
+}
+// Header styles
+.header-wrapper {
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 10px;
+    gap: 10px;
+
+    h1 {
+      font-size: 23px;
+      padding-bottom: 3px;
+    }
+
+    button {
+      border: none;
+      background-color: transparent;
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      cursor: pointer;
+
+      p {
+        padding-bottom: 2px;
+      }
+    }
+  }
+}
+
+.dark-mode {
+  background-color: variables.$dark-mode-bg;
+  .header-wrapper {
+    background-color: variables.$dark-mode-el;
+    color: variables.$darkm-txt-lightm-el;
+    header {
+      button {
+        color: inherit;
+      }
+    }
+  }
+}
+.light-mode {
+  background-color: variables.$light-mode-background;
+  color: variables.$light-mode-txt;
+}
