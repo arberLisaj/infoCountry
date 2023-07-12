@@ -27,7 +27,7 @@ main {
     gap: 10px;
 
     h1 {
-      font-size: 23px;
+      font-size: 20px;
       padding-bottom: 3px;
     }
 
@@ -45,6 +45,59 @@ main {
     }
   }
 }
+section#filter {
+  width: 100%;
+  padding: 10px;
+  max-width: 1200px;
+  margin: 20px auto;
+  display: flex;
+  gap: 10px;
+  justify-content: space-between;
+  // align-items: center;
+
+  .inputBox {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    width: 60%;
+    max-width: 400px;
+    display: flex;
+    align-items: center;
+    padding: 5px 20px;
+    border-radius: 4px;
+
+    span {
+      padding-top: 4.5px;
+      font-size: 20px;
+      margin-right: 10px;
+    }
+    input {
+      border: none;
+      padding: 8px;
+      background-color: transparent;
+      color: inherit;
+      width: 100%;
+      &:focus {
+        outline: none;
+      }
+    }
+  }
+  select {
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border: none;
+    padding: 10px 20px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    border-radius: 4px;
+    cursor: pointer;
+    &:focus {
+      outline: none;
+    }
+
+    option{
+      text-transform: capitalize;
+    }
+  } 
+}
 
 .dark-mode {
   background-color: variables.$dark-mode-bg;
@@ -57,8 +110,28 @@ main {
       }
     }
   }
+  section#filter {
+    .inputBox {
+      background-color: variables.$dark-mode-el;
+      color: variables.$darkm-txt-lightm-el;
+    }
+    select {
+      background-color: variables.$dark-mode-el;
+      color: variables.$darkm-txt-lightm-el;
+    }
+  }
 }
 .light-mode {
   background-color: variables.$light-mode-background;
   color: variables.$light-mode-txt;
+}
+
+@media (max-width: 600px) {
+  .header-wrapper {
+    header {
+      h1 {
+        font-size: 16px;
+      }
+    }
+  }
 }
