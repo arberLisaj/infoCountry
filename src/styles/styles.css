@@ -80,7 +80,7 @@ section#filter .inputBox input:focus {
 section#filter select {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
   border: none;
-  padding: 10px 20px;
+  padding-inline: 10px;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;

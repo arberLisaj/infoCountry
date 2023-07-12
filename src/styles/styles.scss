@@ -90,7 +90,8 @@ section#filter {
   select {
     box-shadow: variables.$box-shadow-1 0px 4px 12px;
     border: none;
-    padding: 10px 20px;
+    padding-inline: 10px;
+    // text-align: center;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;

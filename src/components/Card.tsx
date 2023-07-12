@@ -1,7 +1,7 @@
 interface Props {
   image: string;
   title: string;
-  population: number;
+  population: string;
   region: string;
   capital: string | undefined;
 }

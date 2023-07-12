@@ -1,16 +1,21 @@
 import Card from "./Card";
 import data from "../data.json";
 
-const CountriesGrid = () => {
-  const slicedArray = data.slice(0, 40);
+interface Props {
+  choosenOption: string;
+}
+const CountriesGrid = ({ choosenOption }: Props) => {
+  const filteredCountriesArray = choosenOption
+    ? data.filter((e) => e.region === choosenOption)
+    : data;
   return (
     <section id="countriesGrid">
-      {slicedArray.map((e, index) => (
+      {filteredCountriesArray.map((e, index) => (
         <Card
           key={index}
           image={e.flag}
           title={e.name}
-          population={e.population}
+          population={e.population.toLocaleString("en-US")}
           region={e.region}
           capital={e.capital}
         />

@@ -1,6 +1,9 @@
 import { AiOutlineSearch } from "react-icons/ai";
 
-const FilterCountries = () => {
+interface Props {
+  setData: (something: string) => void;
+}
+const FilterCountries = ({ setData }: Props) => {
   return (
     <section id="filter">
       <div className="inputBox">
@@ -9,13 +12,12 @@ const FilterCountries = () => {
         </span>
         <input type="text" placeholder="Search for a country..." />
       </div>
-      <select>
-        <option value="">Filter by Region</option>
-        <option value="africa">africa</option>
-        <option value="america">america</option>
-        <option value="asia">Asia</option>
-        <option value="europe">Europe</option>
-        <option value="oceania">Oceania</option>
+      <select onChange={(option) => setData(option.target.value)}>
+        <option value="">All Regions</option>
+        <option value="Africa">africa</option>
+        <option value="Asia">Asia</option>
+        <option value="Europe">Europe</option>
+        <option value="Oceania">Oceania</option>
       </select>
     </section>
   );
