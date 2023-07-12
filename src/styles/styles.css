@@ -2,9 +2,13 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  font-family: "Poppins", sans-serif;
   transition: 0.1s;
   word-break: break-all;
+}
+
+body img {
+  max-width: 100%;
 }
 
 main {
@@ -21,7 +25,7 @@ main {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  padding: 20px 10px;
+  padding: 15px 10px;
   gap: 10px;
 }
 .header-wrapper header h1 {
@@ -44,13 +48,13 @@ section#filter {
   width: 100%;
   padding: 10px;
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 10px auto;
   display: flex;
   gap: 10px;
   justify-content: space-between;
 }
 section#filter .inputBox {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
   width: 60%;
   max-width: 400px;
   display: flex;
@@ -74,7 +78,7 @@ section#filter .inputBox input:focus {
   outline: none;
 }
 section#filter select {
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
   border: none;
   padding: 10px 20px;
   appearance: none;
@@ -88,6 +92,51 @@ section#filter select:focus {
 }
 section#filter select option {
   text-transform: capitalize;
+}
+
+article {
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  background-color: hsl(0, 0%, 100%);
+  color: hsl(200, 15%, 8%);
+  width: 80%;
+  max-width: 275px;
+  margin: 8px auto;
+  border-radius: 5px;
+  overflow: hidden;
+}
+article img {
+  margin-bottom: 5px;
+}
+article .content {
+  padding: 15px 10px;
+  display: flex;
+  flex-direction: column;
+}
+article .content h1 {
+  margin-bottom: 15px;
+  font-size: 20px;
+}
+article .content ul {
+  list-style: none;
+}
+article .content ul li {
+  font-size: 14px;
+  font-weight: bold;
+}
+article .content ul li span {
+  font-weight: normal;
+  padding-left: 8px;
+  color: #757575;
+}
+
+section#countriesGrid {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 13px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .dark-mode {
@@ -108,6 +157,13 @@ section#filter select option {
   background-color: hsl(209, 23%, 22%);
   color: hsl(0, 0%, 100%);
 }
+.dark-mode article {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode article .content ul li span {
+  color: rgb(208, 208, 208);
+}
 
 .light-mode {
   background-color: hsl(0, 0%, 98%);
@@ -115,6 +171,13 @@ section#filter select option {
 }
 
 @media (max-width: 600px) {
+  section#filter .inputBox {
+    padding: 5px 10px;
+  }
+  section#filter select {
+    padding: 8px;
+    font-size: 12px;
+  }
   .header-wrapper header h1 {
     font-size: 16px;
   }

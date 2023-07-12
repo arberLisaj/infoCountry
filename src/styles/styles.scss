@@ -4,9 +4,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
-  font-family: variables.$primary-font;
+  font-family: variables.$secondary-font;
   transition: 0.1s;
   word-break: break-all;
+}
+body {
+  img {
+    max-width: 100%;
+  }
 }
 
 // Main section styles
@@ -15,7 +20,7 @@ main {
 }
 // Header styles
 .header-wrapper {
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: variables.$box-shadow-1 1.95px 1.95px 2.6px;
   header {
     display: flex;
     justify-content: space-between;
@@ -23,7 +28,7 @@ main {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    padding: 20px 10px;
+    padding: 15px 10px;
     gap: 10px;
 
     h1 {
@@ -45,18 +50,20 @@ main {
     }
   }
 }
+
+// Input and Filter section
 section#filter {
   width: 100%;
   padding: 10px;
   max-width: 1200px;
-  margin: 20px auto;
+  margin: 10px auto;
   display: flex;
   gap: 10px;
   justify-content: space-between;
   // align-items: center;
 
   .inputBox {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: variables.$box-shadow-1 0px 4px 12px;
     width: 60%;
     max-width: 400px;
     display: flex;
@@ -81,7 +88,7 @@ section#filter {
     }
   }
   select {
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    box-shadow: variables.$box-shadow-1 0px 4px 12px;
     border: none;
     padding: 10px 20px;
     appearance: none;
@@ -93,10 +100,58 @@ section#filter {
       outline: none;
     }
 
-    option{
+    option {
       text-transform: capitalize;
     }
-  } 
+  }
+}
+
+// Country Card
+article {
+  box-shadow: variables.$box-shadow-2 0px 2px 8px 0px;
+  background-color: variables.$darkm-txt-lightm-el;
+  color: variables.$light-mode-txt;
+  width: 80%;
+  max-width: 275px;
+  margin: 8px auto;
+  border-radius: 5px;
+  overflow: hidden;
+
+  img {
+    margin-bottom: 5px;
+  }
+  .content {
+    padding: 15px 10px;
+    display: flex;
+    flex-direction: column;
+    h1 {
+      margin-bottom: 15px;
+      font-size: 20px;
+    }
+    ul {
+      list-style: none;
+
+      li {
+        font-size: 14px;
+        font-weight: bold;
+        span {
+          font-weight: normal;
+          padding-left: 8px;
+          color: #757575;
+        }
+      }
+    }
+  }
+}
+// Countries Grid
+section#countriesGrid {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  padding: 13px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
 }
 
 .dark-mode {
@@ -120,6 +175,19 @@ section#filter {
       color: variables.$darkm-txt-lightm-el;
     }
   }
+  article {
+    background-color: variables.$dark-mode-el;
+    color: variables.$darkm-txt-lightm-el;
+    .content {
+      ul {
+        li {
+          span {
+            color: rgb(208, 208, 208);
+          }
+        }
+      }
+    }
+  }
 }
 .light-mode {
   background-color: variables.$light-mode-background;
@@ -127,6 +195,16 @@ section#filter {
 }
 
 @media (max-width: 600px) {
+  section#filter {
+    .inputBox {
+      padding: 5px 10px;
+    }
+
+    select {
+      padding: 8px;
+      font-size: 12px;
+    }
+  }
   .header-wrapper {
     header {
       h1 {
