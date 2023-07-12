@@ -3,14 +3,26 @@ import data from "../data.json";
 
 interface Props {
   choosenOption: string;
+  inputValue: string;
 }
-const CountriesGrid = ({ choosenOption }: Props) => {
+const CountriesGrid = ({ choosenOption, inputValue }: Props) => {
+  // Filter by Region
   const filteredCountriesArray = choosenOption
     ? data.filter((e) => e.region === choosenOption)
     : data;
+
+  // Search with Searchbar
+  const filteredItems = inputValue
+    ? data.filter((question) => {
+        return question.name.toLowerCase().includes(inputValue.toLowerCase());
+      })
+    : filteredCountriesArray;
+
+  // console.log(filteredItems);
+
   return (
     <section id="countriesGrid">
-      {filteredCountriesArray.map((e, index) => (
+      {filteredItems.map((e, index) => (
         <Card
           key={index}
           image={e.flag}

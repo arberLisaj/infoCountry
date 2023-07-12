@@ -2,19 +2,26 @@ import { AiOutlineSearch } from "react-icons/ai";
 
 interface Props {
   setData: (something: string) => void;
+  setInputValue: (something: string) => void;
 }
-const FilterCountries = ({ setData }: Props) => {
+const FilterCountries = ({ setData, setInputValue }: Props) => {
   return (
     <section id="filter">
       <div className="inputBox">
         <span>
           <AiOutlineSearch />
         </span>
-        <input type="text" placeholder="Search for a country..." />
+        <input
+          name="search"
+          onChange={(e) => setInputValue(e.target.value)}
+          type="text"
+          placeholder="Search for a country..."
+        />
       </div>
       <select onChange={(option) => setData(option.target.value)}>
         <option value="">All Regions</option>
         <option value="Africa">africa</option>
+        <option value="Americas">Americas</option>
         <option value="Asia">Asia</option>
         <option value="Europe">Europe</option>
         <option value="Oceania">Oceania</option>

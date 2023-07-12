@@ -3,7 +3,6 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  transition: 0.1s;
   word-break: break-all;
 }
 
@@ -80,7 +79,7 @@ section#filter .inputBox input:focus {
 section#filter select {
   box-shadow: rgba(0, 0, 0, 0.15) 0px 4px 12px;
   border: none;
-  padding-inline: 10px;
+  padding-inline: 15px;
   appearance: none;
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -95,17 +94,17 @@ section#filter select option {
 }
 
 article {
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+  box-shadow: rgba(99, 99, 99, 0.3) 1px 4px 8px 1px;
   background-color: hsl(0, 0%, 100%);
   color: hsl(200, 15%, 8%);
   width: 80%;
+  margin: 7px;
   max-width: 275px;
-  margin: 8px auto;
   border-radius: 5px;
   overflow: hidden;
 }
-article img {
-  margin-bottom: 5px;
+article:hover {
+  opacity: 0.8;
 }
 article .content {
   padding: 15px 10px;
@@ -113,7 +112,6 @@ article .content {
   flex-direction: column;
 }
 article .content h1 {
-  margin-bottom: 15px;
   font-size: 20px;
 }
 article .content ul {
@@ -136,6 +134,7 @@ section#countriesGrid {
   padding: 13px 10px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
 }
 

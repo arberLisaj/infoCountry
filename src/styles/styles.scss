@@ -5,7 +5,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: variables.$secondary-font;
-  transition: 0.1s;
+  // transition: 0.1s;
   word-break: break-all;
 }
 body {
@@ -90,8 +90,7 @@ section#filter {
   select {
     box-shadow: variables.$box-shadow-1 0px 4px 12px;
     border: none;
-    padding-inline: 10px;
-    // text-align: center;
+    padding-inline: 15px;
     appearance: none;
     -webkit-appearance: none;
     -moz-appearance: none;
@@ -109,24 +108,23 @@ section#filter {
 
 // Country Card
 article {
-  box-shadow: variables.$box-shadow-2 0px 2px 8px 0px;
+  box-shadow: variables.$box-shadow-2 1px 4px 8px 1px;
   background-color: variables.$darkm-txt-lightm-el;
   color: variables.$light-mode-txt;
   width: 80%;
+  margin: 7px;
   max-width: 275px;
-  margin: 8px auto;
   border-radius: 5px;
   overflow: hidden;
-
-  img {
-    margin-bottom: 5px;
+  &:hover {
+    opacity: 0.8;
   }
+
   .content {
     padding: 15px 10px;
     display: flex;
     flex-direction: column;
     h1 {
-      margin-bottom: 15px;
       font-size: 20px;
     }
     ul {
@@ -152,6 +150,7 @@ section#countriesGrid {
   padding: 13px 10px;
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
   gap: 8px;
 }
 
