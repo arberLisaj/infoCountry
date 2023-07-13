@@ -12,7 +12,12 @@ interface Props {
   subRegion: string;
   capital: string | undefined;
   domain: string[];
-  languages: string;
+  languages: string[];
+  denonym: string;
+  diallingCode: string[];
+  timeZone: string[];
+  area: string | undefined;
+  currency: string[] | undefined;
   borderCountries: string[] | undefined;
 }
 
@@ -28,6 +33,11 @@ const Details = ({
   capital,
   domain,
   languages,
+  denonym,
+  diallingCode,
+  timeZone,
+  area,
+  currency,
   borderCountries,
 }: Props) => {
   return (
@@ -37,13 +47,12 @@ const Details = ({
     >
       <section id="description">
         <button onClick={() => setState(false)}>
-          
-          <BsArrowLeftShort  size="20"/>
+          <BsArrowLeftShort size="20" />
           Back
         </button>
         <img src={img} alt="country flag" />
 
-        <section className="content">
+        <section className="content" onClick={(e) => e.stopPropagation()}>
           <h1>{title}</h1>
           <ul className="grid">
             <li>
@@ -59,9 +68,27 @@ const Details = ({
               SubRegion: <span>{subRegion}</span>
             </li>
             <li>
-              Capital : <span> {capital}</span>
+              Capital: <span> {capital}</span>
             </li>
             <li>
+              Currency: <span>{currency}</span>
+            </li>
+            <li>
+              Area:
+              <span>
+                {area}km<sup>2</sup>
+              </span>
+            </li>
+            <li>
+              Denonym: <span>{denonym}</span>
+            </li>
+            <li>
+              Dialling-Code: <span>{diallingCode}</span>
+            </li>
+            <li>
+              TimeZone <span>{timeZone}</span>
+            </li>
+            <li className="domain">
               Domain:
               {domain.map((d, index) => (
                 <p key={index}>

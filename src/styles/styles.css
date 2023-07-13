@@ -196,7 +196,7 @@ section.tint {
   width: 100%;
   z-index: 99999;
   padding-top: 2em;
-  background-color: rgba(93, 97, 107, 0.8862745098);
+  background-color: rgba(93, 97, 107, 0.7882352941);
 }
 section.tint section#description {
   background-color: hsl(0, 0%, 98%);
@@ -204,7 +204,8 @@ section.tint section#description {
   width: 90%;
   max-width: 1200px;
   border-radius: 10px;
-  min-height: 600px;
+  min-height: -moz-fit-content;
+  min-height: fit-content;
   margin: auto;
 }
 section.tint section#description img {
@@ -250,7 +251,6 @@ section.tint section#description img {
     max-width: fit-content;
   }
   section.tint section#description .content ul li {
-    display: flex;
     font-weight: 500;
   }
   section.tint section#description .content ul li span {
@@ -274,13 +274,14 @@ section.tint section#description img {
     display: flex;
     align-items: center;
     gap: 25px;
+    min-height: 600px;
     padding-inline: 40px;
     position: relative;
   }
   section.tint section#description button {
     position: absolute;
     left: 40px;
-    top: 80px;
+    top: 100px;
     border: none;
     padding: 10px 25px 10px 15px;
     border-radius: 3px;
@@ -302,18 +303,24 @@ section.tint section#description img {
          column-gap: 10px;
   }
   section.tint section#description .content ul.grid li {
-    display: flex;
     font-weight: 500;
+    margin-bottom: 3px;
   }
   section.tint section#description .content ul.grid li span {
     font-weight: normal;
     margin-left: 10px;
   }
+  section.tint section#description .content ul.grid li span.tz {
+    margin-right: 2px;
+  }
+  section.tint section#description .content ul.grid li.domain {
+    display: flex;
+  }
   section.tint section#description .content ul.borders {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    margin-top: 25px;
+    margin-top: 20px;
     list-style: none;
   }
   section.tint section#description .content ul.borders p {

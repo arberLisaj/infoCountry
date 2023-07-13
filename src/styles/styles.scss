@@ -236,7 +236,7 @@ section.tint {
     width: 90%;
     max-width: 1200px;
     border-radius: 10px;
-    min-height: 600px;
+    min-height: fit-content;
     margin: auto;
 
     img {
@@ -276,7 +276,7 @@ section.tint {
         top: 20px;
         display: flex;
         align-items: center;
-        padding:5px 15px 5px 5px;
+        padding: 5px 15px 5px 5px;
         border: none;
       }
       .content {
@@ -290,7 +290,6 @@ section.tint {
           max-width: fit-content;
 
           li {
-            display: flex;
             font-weight: 500;
 
             span {
@@ -316,18 +315,18 @@ section.tint {
 @media (min-width: 950px) {
   section.tint {
     justify-content: space-between;
-
     section#description {
       display: flex;
       align-items: center;
       gap: 25px;
+      min-height: 600px;
       padding-inline: 40px;
       position: relative;
 
       button {
         position: absolute;
         left: 40px;
-        top: 80px;
+        top: 100px;
         border: none;
         padding: 10px 25px 10px 15px;
         border-radius: 3px;
@@ -349,12 +348,18 @@ section.tint {
           column-gap: 10px;
 
           li {
-            display: flex;
             font-weight: 500;
+            margin-bottom: 3px;
             span {
               font-weight: normal;
               margin-left: 10px;
             }
+            span.tz {
+              margin-right: 2px;
+            }
+          }
+          li.domain {
+            display: flex;
           }
         }
 
@@ -362,7 +367,7 @@ section.tint {
           display: flex;
           flex-wrap: wrap;
           align-items: center;
-          margin-top: 25px;
+          margin-top: 20px;
           list-style: none;
           p {
             margin-right: 10px;

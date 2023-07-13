@@ -30,9 +30,13 @@ const CountriesGrid = ({ choosenOption, inputValue }: Props) => {
           nativeName={e.nativeName}
           subRegion={e.subregion}
           domain={e.topLevelDomain}
-          // currency={e.currencies}
-          languages={"language"}
+          denonym={e.demonym}
+          diallingCode={e.callingCodes}
+          timeZone={e.timezones}
+          currency={e.currencies?.map((c) => c.name)}
+          languages={e.languages.map((lang) => lang.name)}
           borderCountries={e.borders}
+          area={e.area?.toLocaleString("en-US")}
         />
       ))}
     </section>

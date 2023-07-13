@@ -12,7 +12,12 @@ interface Props {
   nativeName: string;
   subRegion: string;
   domain: string[];
-  languages: string;
+  languages: string[];
+  denonym: string;
+  diallingCode: string[];
+  timeZone: string[];
+  area: string | undefined;
+  currency: string[] | undefined;
   borderCountries: string[] | undefined;
 }
 const Card = ({
@@ -25,6 +30,11 @@ const Card = ({
   subRegion,
   domain,
   languages,
+  denonym,
+  diallingCode,
+  timeZone,
+  area,
+  currency,
   borderCountries,
 }: Props) => {
   const [detailsState, setDetailsState] = useState<boolean>(false);
@@ -76,6 +86,11 @@ const Card = ({
         capital={capital}
         domain={domain}
         languages={languages}
+        denonym={denonym}
+        diallingCode={diallingCode}
+        timeZone={timeZone}
+        area={area}
+        currency={currency}
         borderCountries={borderCountries}
       />
     </>
