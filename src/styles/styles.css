@@ -15,7 +15,7 @@ main {
 }
 
 .header-wrapper {
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 1.6px;
 }
 .header-wrapper header {
   display: flex;
@@ -288,7 +288,7 @@ section.tint section#description img {
     display: flex;
     align-items: center;
     gap: 10px;
-    box-shadow: rgba(0, 0, 0, 0.15);
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
     cursor: pointer;
   }
   section.tint section#description .content h1 {

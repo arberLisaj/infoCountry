@@ -20,7 +20,7 @@ main {
 }
 // Header styles
 .header-wrapper {
-  box-shadow: variables.$box-shadow-1 1.95px 1.95px 2.6px;
+  box-shadow: variables.$box-shadow-1 1.95px 1.95px 1.6px;
   header {
     display: flex;
     justify-content: space-between;
@@ -333,7 +333,7 @@ section.tint {
         display: flex;
         align-items: center;
         gap: 10px;
-        box-shadow: variables.$box-shadow-1;
+        box-shadow: variables.$box-shadow-1 1.95px 1.95px 2.6px;
         cursor: pointer;
       }
       .content {
