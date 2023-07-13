@@ -18,19 +18,19 @@ const CountriesGrid = ({ choosenOption, inputValue }: Props) => {
       })
     : filteredCountriesArray;
 
-  // console.log(filteredItems);
+  console.log(filteredItems);
 
   return (
     <section id="countriesGrid">
       {filteredItems.map((e, index) => (
-        <Card
-          key={index}
-          image={e.flag}
-          title={e.name}
-          population={e.population.toLocaleString("en-US")}
-          region={e.region}
-          capital={e.capital}
-        />
+          <Card
+            key={index}
+            image={e.flag}
+            title={e.name}
+            population={e.population.toLocaleString("en-US")}
+            region={e.region}
+            capital={e.capital}
+          />
       ))}
     </section>
   );

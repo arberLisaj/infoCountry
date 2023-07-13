@@ -3,7 +3,7 @@
   margin: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
-  word-break: break-all;
+  word-break: break-word;
 }
 
 body img {
@@ -29,7 +29,7 @@ main {
 }
 .header-wrapper header h1 {
   font-size: 20px;
-  padding-bottom: 3px;
+  padding-top: 3px;
 }
 .header-wrapper header button {
   border: none;
@@ -37,17 +37,21 @@ main {
   display: flex;
   align-items: center;
   gap: 7px;
+  border-radius: 30px;
   cursor: pointer;
+  padding: 10px;
+  font-size: 20px;
 }
-.header-wrapper header button p {
-  padding-bottom: 2px;
+.header-wrapper header button:hover {
+  opacity: 0.7;
+  background-color: rgba(255, 255, 255, 0.212);
 }
 
 section#filter {
   width: 100%;
   padding: 10px;
   max-width: 1200px;
-  margin: 10px auto;
+  margin: 15px auto 0px;
   display: flex;
   gap: 10px;
   justify-content: space-between;
@@ -94,7 +98,6 @@ section#filter select option {
 }
 
 article {
-  box-shadow: rgba(99, 99, 99, 0.3) 1px 4px 8px 1px;
   background-color: hsl(0, 0%, 100%);
   color: hsl(200, 15%, 8%);
   width: 80%;
@@ -113,6 +116,7 @@ article .content {
 }
 article .content h1 {
   font-size: 20px;
+  padding-bottom: 10px;
 }
 article .content ul {
   list-style: none;
@@ -168,6 +172,22 @@ section#countriesGrid {
   background-color: hsl(0, 0%, 98%);
   color: hsl(200, 15%, 8%);
 }
+.light-mode .header-wrapper header button:hover {
+  background-color: rgba(206, 206, 206, 0.447);
+}
+.light-mode article {
+  box-shadow: rgba(99, 99, 99, 0.3) 1px 4px 8px 1px;
+}
+
+section.tint {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 99999;
+  background-color: blue;
+}
 
 @media (max-width: 600px) {
   section#filter .inputBox {
@@ -180,4 +200,11 @@ section#countriesGrid {
   .header-wrapper header h1 {
     font-size: 16px;
   }
+}
+.show {
+  display: block;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=styles.css.map */

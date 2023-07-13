@@ -1,7 +1,7 @@
 const Details = () => {
   return (
-    <section id="details">
-      <p>here will be desplayed the country details</p>
+    <section>
+      <p>details</p>
     </section>
   );
 };

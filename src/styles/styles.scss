@@ -6,7 +6,7 @@
   box-sizing: border-box;
   font-family: variables.$secondary-font;
   // transition: 0.1s;
-  word-break: break-all;
+  word-break: break-word;
 }
 body {
   img {
@@ -33,7 +33,7 @@ main {
 
     h1 {
       font-size: 20px;
-      padding-bottom: 3px;
+      padding-top: 3px;
     }
 
     button {
@@ -42,10 +42,13 @@ main {
       display: flex;
       align-items: center;
       gap: 7px;
+      border-radius: 30px;
       cursor: pointer;
-
-      p {
-        padding-bottom: 2px;
+      padding: 10px;
+      font-size: 20px;
+      &:hover {
+        opacity: 0.7;
+        background-color: rgba(255, 255, 255, 0.212);
       }
     }
   }
@@ -56,11 +59,10 @@ section#filter {
   width: 100%;
   padding: 10px;
   max-width: 1200px;
-  margin: 10px auto;
+  margin: 15px auto 0px;
   display: flex;
   gap: 10px;
   justify-content: space-between;
-  // align-items: center;
 
   .inputBox {
     box-shadow: variables.$box-shadow-1 0px 4px 12px;
@@ -108,7 +110,6 @@ section#filter {
 
 // Country Card
 article {
-  box-shadow: variables.$box-shadow-2 1px 4px 8px 1px;
   background-color: variables.$darkm-txt-lightm-el;
   color: variables.$light-mode-txt;
   width: 80%;
@@ -126,6 +127,7 @@ article {
     flex-direction: column;
     h1 {
       font-size: 20px;
+      padding-bottom: 10px;
     }
     ul {
       list-style: none;
@@ -192,6 +194,28 @@ section#countriesGrid {
 .light-mode {
   background-color: variables.$light-mode-background;
   color: variables.$light-mode-txt;
+
+  .header-wrapper {
+    header {
+      button {
+        &:hover {
+          background-color: rgba(206, 206, 206, 0.447);
+        }
+      }
+    }
+  }
+  article {
+    box-shadow: variables.$box-shadow-2 1px 4px 8px 1px;
+  }
+}
+section.tint {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100%;
+  z-index: 99999;
+  background-color: blue;
 }
 
 @media (max-width: 600px) {
@@ -212,4 +236,11 @@ section#countriesGrid {
       }
     }
   }
+}
+
+.show {
+  display: block;
+}
+.hide {
+  display: none;
 }
