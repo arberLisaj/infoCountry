@@ -105,6 +105,7 @@ article {
   max-width: 275px;
   border-radius: 5px;
   overflow: hidden;
+  cursor: pointer;
 }
 article:hover {
   opacity: 0.8;
@@ -167,6 +168,14 @@ section#countriesGrid {
 .dark-mode article .content ul li span {
   color: rgb(208, 208, 208);
 }
+.dark-mode section.tint section#description {
+  background-color: hsl(209, 23%, 22%);
+  color: hsl(0, 0%, 100%);
+}
+.dark-mode section.tint section#description button {
+  background-color: hsl(207, 26%, 17%);
+  color: inherit;
+}
 
 .light-mode {
   background-color: hsl(0, 0%, 98%);
@@ -186,10 +195,24 @@ section.tint {
   height: 100vh;
   width: 100%;
   z-index: 99999;
-  background-color: blue;
+  padding-top: 2em;
+  background-color: rgba(93, 97, 107, 0.8862745098);
+}
+section.tint section#description {
+  background-color: hsl(0, 0%, 98%);
+  padding: 10px;
+  width: 90%;
+  max-width: 1200px;
+  border-radius: 10px;
+  min-height: 600px;
+  margin: auto;
+}
+section.tint section#description img {
+  width: 40%;
+  max-width: 400px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 950px) {
   section#filter .inputBox {
     padding: 5px 10px;
   }
@@ -199,6 +222,112 @@ section.tint {
   }
   .header-wrapper header h1 {
     font-size: 16px;
+  }
+  section.tint {
+    padding-top: 10px;
+  }
+  section.tint section#description {
+    padding: 20px;
+    padding-top: 60px;
+    position: relative;
+  }
+  section.tint section#description button {
+    position: absolute;
+    top: 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px 5px 5px;
+    border: none;
+  }
+  section.tint section#description .content h1 {
+    font-size: 17px;
+    padding-block: 5px;
+  }
+  section.tint section#description .content ul {
+    list-style: none;
+    text-align: left;
+    max-width: -moz-fit-content;
+    max-width: fit-content;
+  }
+  section.tint section#description .content ul li {
+    display: flex;
+    font-weight: 500;
+  }
+  section.tint section#description .content ul li span {
+    font-weight: normal;
+    margin-left: 5px;
+  }
+  section.tint section#description ul.borders {
+    margin-top: 15px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  section.tint section#description ul.borders li {
+    margin-left: 8px;
+  }
+}
+@media (min-width: 950px) {
+  section.tint {
+    justify-content: space-between;
+  }
+  section.tint section#description {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+    padding-inline: 40px;
+    position: relative;
+  }
+  section.tint section#description button {
+    position: absolute;
+    left: 40px;
+    top: 80px;
+    border: none;
+    padding: 10px 25px 10px 15px;
+    border-radius: 3px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    box-shadow: rgba(0, 0, 0, 0.15);
+    cursor: pointer;
+  }
+  section.tint section#description .content h1 {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  section.tint section#description .content ul.grid {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    -moz-column-gap: 10px;
+         column-gap: 10px;
+  }
+  section.tint section#description .content ul.grid li {
+    display: flex;
+    font-weight: 500;
+  }
+  section.tint section#description .content ul.grid li span {
+    font-weight: normal;
+    margin-left: 10px;
+  }
+  section.tint section#description .content ul.borders {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 25px;
+    list-style: none;
+  }
+  section.tint section#description .content ul.borders p {
+    margin-right: 10px;
+  }
+  section.tint section#description .content ul.borders li {
+    background-color: gray;
+    color: hsl(0, 0%, 100%);
+    margin: 5px;
+    padding: 3px 8px;
+    border-radius: 2px;
+  }
+  section.tint section#description .content ul.borders li span {
+    margin-left: 5px;
   }
 }
 .show {

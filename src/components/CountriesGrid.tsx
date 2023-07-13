@@ -17,20 +17,23 @@ const CountriesGrid = ({ choosenOption, inputValue }: Props) => {
         return question.name.toLowerCase().includes(inputValue.toLowerCase());
       })
     : filteredCountriesArray;
-
-  console.log(filteredItems);
-
   return (
     <section id="countriesGrid">
       {filteredItems.map((e, index) => (
-          <Card
-            key={index}
-            image={e.flag}
-            title={e.name}
-            population={e.population.toLocaleString("en-US")}
-            region={e.region}
-            capital={e.capital}
-          />
+        <Card
+          key={index}
+          image={e.flag}
+          title={e.name}
+          population={e.population.toLocaleString("en-US")}
+          region={e.region}
+          capital={e.capital}
+          nativeName={e.nativeName}
+          subRegion={e.subregion}
+          domain={e.topLevelDomain}
+          // currency={e.currencies}
+          languages={"language"}
+          borderCountries={e.borders}
+        />
       ))}
     </section>
   );
