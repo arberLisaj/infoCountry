@@ -45,14 +45,14 @@ const Details = ({
       className={state ? "show tint" : "hide tint"}
       onClick={() => setState(false)}
     >
-      <section id="description">
+      <section id="description" onClick={(e) => e.stopPropagation()}>
         <button onClick={() => setState(false)}>
           <BsArrowLeftShort size="20" />
           Back
         </button>
         <img src={img} alt="country flag" />
 
-        <section className="content" onClick={(e) => e.stopPropagation()}>
+        <section className="content">
           <h1>{title}</h1>
           <ul className="grid">
             <li>
