@@ -9,6 +9,9 @@
 body img {
   max-width: 100%;
 }
+body li.domain {
+  display: flex;
+}
 
 main {
   min-height: 100vh;
@@ -24,7 +27,7 @@ main {
   width: 100%;
   max-width: 1200px;
   margin: auto;
-  padding: 15px 10px;
+  padding: 10px;
   gap: 10px;
 }
 .header-wrapper header h1 {
@@ -100,7 +103,7 @@ section#filter select option {
 article {
   background-color: hsl(0, 0%, 100%);
   color: hsl(200, 15%, 8%);
-  width: 80%;
+  width: 100%;
   margin: 7px;
   max-width: 275px;
   border-radius: 5px;
@@ -221,41 +224,66 @@ section.tint section#description img {
     padding: 8px;
     font-size: 12px;
   }
+  .header-wrapper {
+    padding-inline: 5px;
+  }
   .header-wrapper header h1 {
     font-size: 16px;
   }
+  article {
+    width: 100%;
+    max-width: 380px;
+  }
+  section#filter {
+    padding-inline: 15px;
+  }
   section.tint {
-    padding-top: 10px;
+    padding: 0;
   }
   section.tint section#description {
+    border-radius: 0;
     padding: 20px;
+    width: 100%;
     padding-top: 60px;
     position: relative;
+    font-size: 14px;
   }
   section.tint section#description button {
     position: absolute;
-    top: 20px;
+    top: 10px;
     display: flex;
     align-items: center;
-    padding: 5px 15px 5px 5px;
+    padding: 10px 30px 10px 20px;
     border: none;
+    border-radius: 4px;
+  }
+  section.tint section#description img {
+    width: 100%;
+    display: block;
+    margin: auto;
   }
   section.tint section#description .content h1 {
     font-size: 17px;
     padding-block: 5px;
+    text-align: center;
   }
   section.tint section#description .content ul {
     list-style: none;
     text-align: left;
     max-width: -moz-fit-content;
     max-width: fit-content;
+    margin: auto;
+    width: 100%;
+    max-width: 390px;
   }
   section.tint section#description .content ul li {
     font-weight: 500;
+    display: flex;
+    justify-content: space-between;
   }
   section.tint section#description .content ul li span {
     font-weight: normal;
-    margin-left: 5px;
+    margin-left: 8px;
   }
   section.tint section#description ul.borders {
     margin-top: 15px;
@@ -313,9 +341,6 @@ section.tint section#description img {
   section.tint section#description .content ul.grid li span.tz {
     margin-right: 2px;
   }
-  section.tint section#description .content ul.grid li.domain {
-    display: flex;
-  }
   section.tint section#description .content ul.borders {
     display: flex;
     flex-wrap: wrap;
@@ -327,8 +352,9 @@ section.tint section#description img {
     margin-right: 10px;
   }
   section.tint section#description .content ul.borders li {
-    background-color: gray;
-    color: hsl(0, 0%, 100%);
+    background-color: rgb(255, 255, 255);
+    color: hsl(200, 15%, 8%);
+    border: 1px solid gainsboro;
     margin: 5px;
     padding: 3px 8px;
     border-radius: 2px;

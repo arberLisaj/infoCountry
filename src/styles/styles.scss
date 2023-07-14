@@ -5,12 +5,14 @@
   margin: 0;
   box-sizing: border-box;
   font-family: variables.$secondary-font;
-  // transition: 0.1s;
   word-break: break-word;
 }
 body {
   img {
     max-width: 100%;
+  }
+  li.domain {
+    display: flex;
   }
 }
 
@@ -28,7 +30,7 @@ main {
     width: 100%;
     max-width: 1200px;
     margin: auto;
-    padding: 15px 10px;
+    padding: 10px;
     gap: 10px;
 
     h1 {
@@ -112,7 +114,7 @@ section#filter {
 article {
   background-color: variables.$darkm-txt-lightm-el;
   color: variables.$light-mode-txt;
-  width: 80%;
+  width: 100%;
   margin: 7px;
   max-width: 275px;
   border-radius: 5px;
@@ -258,43 +260,66 @@ section.tint {
     }
   }
   .header-wrapper {
+    padding-inline: 5px;
     header {
       h1 {
         font-size: 16px;
       }
     }
   }
+  article {
+    width: 100%;
+    max-width: 380px;
+  }
+  section#filter {
+    padding-inline: 15px;
+  }
   section.tint {
-    padding-top: 10px;
+    padding: 0;
     section#description {
+      border-radius: 0;
       padding: 20px;
+      width: 100%;
       padding-top: 60px;
       position: relative;
+      font-size: 14px;
 
       button {
         position: absolute;
-        top: 20px;
+        top: 10px;
         display: flex;
         align-items: center;
-        padding: 5px 15px 5px 5px;
+        padding: 10px 30px 10px 20px;
         border: none;
+        border-radius: 4px;
+      }
+      img {
+        width: 100%;
+        display: block;
+        margin: auto;
       }
       .content {
         h1 {
           font-size: 17px;
           padding-block: 5px;
+          text-align: center;
         }
         ul {
           list-style: none;
           text-align: left;
           max-width: fit-content;
+          margin: auto;
+          width: 100%;
+          max-width: 390px;
 
           li {
             font-weight: 500;
+            display: flex;
+            justify-content: space-between;
 
             span {
               font-weight: normal;
-              margin-left: 5px;
+              margin-left: 8px;
             }
           }
         }
@@ -358,9 +383,6 @@ section.tint {
               margin-right: 2px;
             }
           }
-          li.domain {
-            display: flex;
-          }
         }
 
         ul.borders {
@@ -373,8 +395,9 @@ section.tint {
             margin-right: 10px;
           }
           li {
-            background-color: gray;
-            color: variables.$darkm-txt-lightm-el;
+            background-color: rgb(255, 255, 255);
+            color: variables.$light-mode-txt;
+            border: 1px solid gainsboro;
             margin: 5px;
             padding: 3px 8px;
             border-radius: 2px;

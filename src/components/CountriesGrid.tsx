@@ -1,5 +1,5 @@
 import Card from "./Card";
-import data from "../data.json";
+import data from "../data/data.json";
 
 interface Props {
   choosenOption: string;
