@@ -7,7 +7,7 @@ Live Demo : https://arberlisaj.github.io/rest-countries/
 - 🌙 Dark mode state saved on localstorage
 - 📱 Responsive Layout
 
-## Screenshot
+## Screenshots
 ### Dark Mode
 ![Screenshot (88)](https://github.com/arberLisaj/rest-countries/assets/105673782/fbcd551a-e670-4267-99d7-6b8356588ac1)
 ### Light Mode
