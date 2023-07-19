@@ -241,16 +241,18 @@ section.tint section#description img {
     padding: 0;
   }
   section.tint section#description {
+    min-height: 100vh;
     border-radius: 0;
-    padding: 20px;
+    padding: 10px;
     width: 100%;
-    padding-top: 60px;
+    padding-top: 65px;
     position: relative;
     font-size: 14px;
   }
   section.tint section#description button {
     position: absolute;
     top: 10px;
+    left: 10px;
     display: flex;
     align-items: center;
     padding: 10px 30px 10px 20px;
@@ -263,8 +265,8 @@ section.tint section#description img {
     margin: auto;
   }
   section.tint section#description .content h1 {
-    font-size: 17px;
-    padding-block: 5px;
+    font-size: 18px;
+    padding-block: 20px 5px;
     text-align: center;
   }
   section.tint section#description .content ul {
@@ -279,19 +281,18 @@ section.tint section#description img {
   section.tint section#description .content ul li {
     font-weight: 500;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    gap: 5px;
+    font-weight: bold;
+    border-bottom: 1px solid gainsboro;
+    padding-block: 5px;
   }
   section.tint section#description .content ul li span {
     font-weight: normal;
     margin-left: 8px;
   }
   section.tint section#description ul.borders {
-    margin-top: 15px;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  section.tint section#description ul.borders li {
-    margin-left: 8px;
+    display: none;
   }
 }
 @media (min-width: 950px) {
@@ -309,7 +310,7 @@ section.tint section#description img {
   section.tint section#description button {
     position: absolute;
     left: 40px;
-    top: 100px;
+    top: 40px;
     border: none;
     padding: 10px 25px 10px 15px;
     border-radius: 3px;

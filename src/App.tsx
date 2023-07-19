@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
-import Header from "./components/Header";
 import FilterCountries from "./components/FilterCountries";
 import CountriesGrid from "./components/CountriesGrid";
+import Header from "./components/Header";
 import "./styles/styles.css";
 
 const App = () => {

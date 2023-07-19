@@ -46,10 +46,13 @@ const Details = ({
       onClick={() => setState(false)}
     >
       <section id="description" onClick={(e) => e.stopPropagation()}>
-        <button onClick={() => setState(false)}>
-          <BsArrowLeftShort size="20" />
-          Back
-        </button>
+        <div className="img-container" style={{display:'flex' , flexDirection:"column" ,  justifyContent:'flex-start'}}>
+          <button onClick={() => setState(false)}>
+            <BsArrowLeftShort size="20" />
+            Back
+          </button>
+        </div>
+
         <img src={img} alt="country flag" />
 
         <section className="content">

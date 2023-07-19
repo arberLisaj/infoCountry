@@ -11,12 +11,13 @@ const CountriesGrid = ({ choosenOption, inputValue }: Props) => {
     ? data.filter((e) => e.region === choosenOption)
     : data;
 
-  // Search with Searchbar
+  // Search countries  
   const filteredItems = inputValue
     ? data.filter((question) => {
         return question.name.toLowerCase().includes(inputValue.toLowerCase());
       })
     : filteredCountriesArray;
+    
   return (
     <section id="countriesGrid">
       {filteredItems.map((e, index) => (

@@ -7,8 +7,6 @@ interface Props {
   population: string;
   region: string;
   capital: string | undefined;
-
-  // other data
   nativeName: string;
   subRegion: string;
   domain: string[];
@@ -39,15 +37,14 @@ const Card = ({
 }: Props) => {
   const [detailsState, setDetailsState] = useState<boolean>(false);
 
+  // close on esc key 
   useEffect(() => {
     const handleEscKey = (event: KeyboardEvent) => {
       if (event.key === "Escape") {
         setDetailsState(false);
       }
     };
-    // Attach the event listener
     document.addEventListener("keydown", handleEscKey);
-    // Clean up the event listener
     return () => {
       document.removeEventListener("keydown", handleEscKey);
     };
@@ -76,7 +73,6 @@ const Card = ({
         setState={(data) => {
           setDetailsState(data);
         }}
-        // filling data
         img={image}
         title={title}
         nativeName={nativeName}
