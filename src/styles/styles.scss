@@ -304,23 +304,19 @@ section.tint {
         h1 {
           font-size: 18px;
           padding-block: 20px 5px;
-          text-align: center;
+          text-align: left;
         }
         ul {
+          overflow-y: scroll;
           list-style: none;
           text-align: left;
           max-width: fit-content;
-          margin: auto;
           width: 100%;
-          max-width: 390px;
 
           li {
             font-weight: 500;
-            display: flex;
-            justify-content: center;
             gap: 5px;
             font-weight: bold;
-            border-bottom: 1px solid variables.$gainsboro;
             padding-block: 5px;
             span {
               font-weight: normal;

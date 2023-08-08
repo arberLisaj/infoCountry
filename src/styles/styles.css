@@ -267,24 +267,20 @@ section.tint section#description img {
   section.tint section#description .content h1 {
     font-size: 18px;
     padding-block: 20px 5px;
-    text-align: center;
+    text-align: left;
   }
   section.tint section#description .content ul {
+    overflow-y: scroll;
     list-style: none;
     text-align: left;
     max-width: -moz-fit-content;
     max-width: fit-content;
-    margin: auto;
     width: 100%;
-    max-width: 390px;
   }
   section.tint section#description .content ul li {
     font-weight: 500;
-    display: flex;
-    justify-content: center;
     gap: 5px;
     font-weight: bold;
-    border-bottom: 1px solid gainsboro;
     padding-block: 5px;
   }
   section.tint section#description .content ul li span {
