@@ -1,21 +1,14 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import FilterCountries from "./components/FilterCountries";
 import CountriesGrid from "./components/CountriesGrid";
 import Header from "./components/Header";
+import useLocalStorage from "./hooks/useLocalStorage";
 import "./styles/styles.css";
 
 const App = () => {
-  const [darkMode, setDarkMode] = useState(()=>{
-  const localValue = localStorage.getItem("darkModeState");
-    if (localValue == null) return [];
-    return JSON.parse(localValue);
-  });
+  const [darkMode, setDarkMode] = useLocalStorage("darkMode", "dark");
   const [choosenRegion, setChoosenRegion] = useState("");
   const [inputValue, setInputValue] = useState("");
-
-  useEffect(() => {
-    localStorage.setItem("darkModeState", JSON.stringify(darkMode));
-  }, [darkMode]);
 
   return (
     <main className={darkMode ? "dark-mode" : "light-mode"}>
