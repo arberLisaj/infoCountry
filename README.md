@@ -1,9 +1,8 @@
 # Rest Countries - Find your Country
-Live Demo : https://arberlisaj.github.io/rest-countries/
+*Live Demo: https://arberlisaj.github.io/infoCountry/*
 
 ##  Features
 - 🔍 Search your country or filter countries by Region
-- ℹ Click on the country to view more about the country
 - 🌙 Dark mode state saved on localstorage
 - 📱 Responsive Layout
 
