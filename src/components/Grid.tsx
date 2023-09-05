@@ -1,10 +1,24 @@
 import data from "../data/data.json";
 import Country from "./Country";
+interface Props {
+  inputValue: string;
+}
+const Grid = ({ inputValue }: Props) => {
+  const filteredItems = inputValue
+    ? data.filter((d) => {
+        return d.name.toLowerCase().includes(inputValue.toLowerCase());
+      })
+    : data;
 
-const Grid = () => {
+  if (filteredItems.length === 0)
+    return (
+      <p style={{ textAlign: "center" }}>
+        No result for <b style={{ fontWeight: "bold" }}>"{inputValue}"</b>
+      </p>
+    );
   return (
     <div id="grid">
-      {data.map((country) => (
+      {filteredItems.map((country) => (
         <Country
           key={country.name}
           img={country.flags.png}

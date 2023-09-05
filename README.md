@@ -1,23 +1,19 @@
-# Rest Countries - Find your Country
+## Installation.
 
-_Live Demo: https://arberlisaj.github.io/infoCountry/_
+### Clone this repository
 
-## Features
+```
+git clone git@github.com:arberLisaj/infoCountry.git
+```
 
-- 🔍 Search your country or filter countries by Region
-- 🌙 Dark mode state saved on localstorage
-- 📱  Responsive Layout
+### Install the dependencies.
 
-## Screenshots
+```
+npm i
+```
 
-### Dark Mode
+### Start the developement server.
 
-![Screenshot (88)](https://github.com/arberLisaj/rest-countries/assets/105673782/fbcd551a-e670-4267-99d7-6b8356588ac1)
-
-### Light Mode
-
-![Screenshot (89)](https://github.com/arberLisaj/rest-countries/assets/105673782/3cb9bbc0-cb85-4b84-9df8-2b57f5df555c)
-
-### Mobile Screen
-
-![Screenshot (90)](https://github.com/arberLisaj/rest-countries/assets/105673782/480a9c50-06e9-448f-949e-b46faa88ca45)
+```
+npm run dev
+```

@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from "react-router-dom";
 import countries from "./data/data.json";
 import { useEffect } from "react";
+
 const InfoPage = () => {
   const params = useParams();
   const navigate = useNavigate();
@@ -15,7 +16,9 @@ const InfoPage = () => {
   return (
     <div id="infoPage">
       <header>
-        <button onClick={() => navigate("/")}>back</button>
+        <button title="back" onClick={() => navigate("/")}>
+          back
+        </button>
       </header>
       <div>
         <img src={country.flag} alt="country flag" />

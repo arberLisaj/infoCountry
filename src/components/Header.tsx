@@ -7,7 +7,7 @@ const Header = () => {
     <header id="websiteHeader">
       <div>
         <h1>Where in the world?</h1>
-        <button onClick={() => setDarkMode(!darkMode)}>
+        <button title="dark mode" onClick={() => setDarkMode(!darkMode)}>
           {darkMode ? <BsSun /> : <BsMoon />}
         </button>
       </div>
