@@ -1,20 +1,17 @@
-import { BsFillMoonFill, BsMoon } from "react-icons/bs";
+import { BsMoon, BsSun } from "react-icons/bs";
+import useLocalStorage from "../hooks/useLocalStorage";
 
-interface Props {
-  darkMode: boolean;
-  setDarkMode: (value: boolean) => void;
-}
-const Header = ({ darkMode, setDarkMode }: Props) => {
+const Header = () => {
+  const [darkMode, setDarkMode] = useLocalStorage("darkMode", "");
   return (
-    <section className="header-wrapper">
-      <header>
-        <h1>Where in the world? </h1>
+    <header id="websiteHeader">
+      <div>
+        <h1>Where in the world?</h1>
         <button onClick={() => setDarkMode(!darkMode)}>
-          {darkMode ? <BsFillMoonFill /> : <BsMoon />}
+          {darkMode ? <BsSun /> : <BsMoon />}
         </button>
-      </header>
-    </section>
+      </div>
+    </header>
   );
 };
-
 export default Header;

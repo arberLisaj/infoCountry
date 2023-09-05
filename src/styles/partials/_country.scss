@@ -1,0 +1,29 @@
+.article {
+  margin-bottom: 10px;
+  max-width: 292px;
+  overflow: hidden;
+  border: 1px solid gainsboro;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  text-decoration: none;
+  color: inherit;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  .content {
+    padding: 5px;
+    padding-bottom: 10px;
+    h1 {
+      font-weight: bold;
+      margin-block: 5px;
+    }
+    p {
+      font-weight: 500;
+    }
+  }
+}
