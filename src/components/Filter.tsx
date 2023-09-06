@@ -1,8 +1,10 @@
 import { BsSearch } from "react-icons/bs";
+
 interface Props {
   inputValue: string;
   setInputValue: (value: string) => void;
 }
+
 const Filter = ({ inputValue, setInputValue }: Props) => {
   return (
     <div id="filter">

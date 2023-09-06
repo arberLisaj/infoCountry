@@ -1,7 +1,10 @@
 div#infoPage {
-  max-width: 1210px;
-  margin: auto;
-  padding: 10px;
+  .wrapper {
+    margin: auto;
+    padding: 10px;
+    max-width: 1210px;
+    min-height: 100vh;
+  }
   header {
     display: flex;
     gap: 8px;
@@ -20,6 +23,16 @@ div#infoPage {
   img {
     max-width: 290px;
     margin-bottom: 10px;
-    border: 1px solid lightgray;
+  }
+  h1,
+  li {
+    font-weight: 500;
+    padding-top: 3px;
+  }
+  h1 {
+    font-size: 20px;
+  }
+  ul {
+    list-style: none;
   }
 }

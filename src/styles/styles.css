@@ -9,49 +9,32 @@
   border: none;
 }
 
+.dark-mode {
+  color: white;
+  background-color: hsl(209, 23%, 22%);
+}
+
 header#websiteHeader {
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
 }
 header#websiteHeader div {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: auto;
-  width: 100%;
   max-width: 1200px;
-}
-header#websiteHeader div h1 {
-  font-weight: 500;
-}
-header#websiteHeader div button {
-  height: 35px;
-  width: 35px;
-  border-radius: 50%;
-  display: grid;
-  place-content: center;
-  cursor: pointer;
-}
-header#websiteHeader div button:hover {
-  background-color: #eaeaea;
-}
-header#websiteHeader div button:active {
-  background-color: rgba(234, 234, 234, 0.5176470588);
+  margin: auto;
 }
 
 div#filter {
   display: flex;
   justify-content: space-between;
-  max-width: 1210px;
+  max-width: 1200px;
   margin: auto;
-  padding: 10px;
   gap: 20px;
-  margin-block: 10px;
+  margin-block: 20px;
 }
 div#filter div {
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   border: 1px solid rgb(219, 219, 219);
-  padding: 5px 10px;
+  padding: 3px 10px;
   display: flex;
   gap: 5px;
   align-items: center;
@@ -79,23 +62,25 @@ div#grid {
   margin-bottom: 10px;
   max-width: 292px;
   overflow: hidden;
-  border: 1px solid gainsboro;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   text-decoration: none;
   color: inherit;
+  border: 1px solid rgba(113, 113, 113, 0.422);
+  border-radius: 4px;
+  padding: 10px;
 }
 .article img {
   width: 100%;
   height: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .article .content {
   padding: 5px;
-  padding-bottom: 10px;
+  padding-block: 10px 15px;
 }
 .article .content h1 {
   font-weight: bold;
@@ -104,11 +89,15 @@ div#grid {
 .article .content p {
   font-weight: 500;
 }
+.article:hover {
+  transform: scale(1.005);
+}
 
-div#infoPage {
-  max-width: 1210px;
+div#infoPage .wrapper {
   margin: auto;
   padding: 10px;
+  max-width: 1210px;
+  min-height: 100vh;
 }
 div#infoPage header {
   display: flex;
@@ -127,5 +116,15 @@ div#infoPage header button {
 div#infoPage img {
   max-width: 290px;
   margin-bottom: 10px;
-  border: 1px solid lightgray;
+}
+div#infoPage h1,
+div#infoPage li {
+  font-weight: 500;
+  padding-top: 3px;
+}
+div#infoPage h1 {
+  font-size: 20px;
+}
+div#infoPage ul {
+  list-style: none;
 }/*# sourceMappingURL=styles.css.map */

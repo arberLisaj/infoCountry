@@ -2,28 +2,7 @@ header#websiteHeader {
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
   div {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: auto;
-    width: 100%;
     max-width: 1200px;
-    h1 {
-      font-weight: 500;
-    }
-    button {
-      height: 35px;
-      width: 35px;
-      border-radius: 50%;
-      display: grid;
-      place-content: center;
-      cursor: pointer;
-      &:hover {
-        background-color: #eaeaea;
-      }
-      &:active {
-        background-color: #eaeaea84;
-      }
-    }
+    margin: auto;
   }
 }
