@@ -1,11 +1,11 @@
 import data from "../data/data.json";
-import { useTheme } from "../theme/ThemeProvider";
 import Country from "./Country";
+
 interface Props {
   inputValue: string;
 }
+
 const Grid = ({ inputValue }: Props) => {
-  const { darkMode } = useTheme();
   const filteredItems = inputValue
     ? data.filter((d) => {
         return d.name.toLowerCase().includes(inputValue.toLowerCase());
@@ -19,7 +19,7 @@ const Grid = ({ inputValue }: Props) => {
       </p>
     );
   return (
-    <div id="grid" className={darkMode ? "dark-mode" : "light-mode"}>
+    <div id="grid">
       {filteredItems.map((country) => (
         <Country
           key={country.name}

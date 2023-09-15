@@ -19,7 +19,7 @@ const InfoPage = () => {
     <div id="infoPage">
       <div className="wrapper">
         <header>
-          <button title="back" onClick={() => navigate("/")}>
+          <button title="back" type="button" onClick={() => navigate("/")}>
             back
           </button>
         </header>

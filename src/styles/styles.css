@@ -9,11 +9,6 @@
   border: none;
 }
 
-.dark-mode {
-  color: white;
-  background-color: hsl(209, 23%, 22%);
-}
-
 header#websiteHeader {
   padding: 10px;
   box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;

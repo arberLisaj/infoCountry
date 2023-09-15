@@ -20,10 +20,6 @@ $light-mode-txt: hsl(200, 15%, 8%);
 // both
 $darkm-txt-lightm-el: white;
 
-.dark-mode {
-  color: $darkm-txt-lightm-el;
-  background-color: $dark-mode-el;
-}
 @import "./partials/header";
 @import "./partials/filter";
 @import "./partials/grid";
