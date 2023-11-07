@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Country from "./components/Country";
 import Filter from "./components/Filter";
 import Header from "./components/Header";
@@ -17,6 +17,10 @@ function App() {
     ? filterByRegion
     : countries;
 
+  useEffect(() => {
+    if (inputValue) setRegion("");
+    if (region) setInputValue("");
+  }, [inputValue, region]);
   return (
     <main>
       <Header />

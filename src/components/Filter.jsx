@@ -19,7 +19,7 @@ function Filter({ inputValue, setInputValue, region, setRegion }) {
           border: "1px solid gainsboro",
           alignItems: "center",
           gap: "5px",
-          padding: "5px 10px",
+          padding: "0px 10px",
           borderRadius: "4px",
         }}
       >
@@ -32,7 +32,7 @@ function Filter({ inputValue, setInputValue, region, setRegion }) {
           placeholder="Search a country..."
           style={{
             border: "none",
-            padding: "3px 5px",
+            padding: "7px 3px",
           }}
         />
       </div>
@@ -48,6 +48,7 @@ function Filter({ inputValue, setInputValue, region, setRegion }) {
         value={region}
         onChange={(e) => setRegion(e.target.value)}
       >
+        <option value="">Region</option>
         <option value="Europe">Europe</option>
         <option value="Americas">Americas</option>
         <option value="Oceania">Oceania</option>
