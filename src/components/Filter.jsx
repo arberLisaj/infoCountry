@@ -1,4 +1,3 @@
-import { useState } from "react";
 import { AiOutlineSearch } from "react-icons/ai";
 
 function Filter({ inputValue, setInputValue, region, setRegion }) {
@@ -9,7 +8,9 @@ function Filter({ inputValue, setInputValue, region, setRegion }) {
         justifyContent: "space-between",
         maxWidth: "1200px",
         marginInline: "auto",
-        paddingBlock: "15px",
+        padding: "15px 10px",
+        gap:'5px',
+        
       }}
     >
       <div
@@ -27,6 +28,8 @@ function Filter({ inputValue, setInputValue, region, setRegion }) {
         <input
           type="search"
           name="searchbar"
+          autoFocus
+          maxLength={40}
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           placeholder="Search a country..."

@@ -4,6 +4,7 @@ function Header() {
       style={{
         width: "100%",
         boxShadow: "rgba(0, 0, 0, 0.10) 1.95px 1.95px 2.6px",
+        paddingInline: "15px",
       }}
     >
       <div

@@ -9,9 +9,6 @@
   list-style: none;
   color: rgba(0, 0, 0, 0.776);
 }
-body {
-  padding-inline: 15px;
-}
 input:focus,
 select {
   outline: none;
@@ -34,4 +31,5 @@ ul li span {
   display: grid;
   gap: 5px;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  padding-inline: 10px;
 }
